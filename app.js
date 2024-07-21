@@ -12,3 +12,11 @@ reactRoot.render(heading);
 const headings = [React.createElement('h1', {}, "Heading 1"), React.createElement('h2', {}, "Heading 2")];
 const multipleRoot = ReactDOM.createRoot(document.getElementById('multipleRoot'));
 multipleRoot.render(headings)
+
+//nested tags
+const display = React.createElement('div', {id: 'display'}, 'Final Display');
+const child = React.createElement('div', {id: 'child'}, display);
+const parent = React.createElement('div', {id: 'parent'}, child);
+
+const nestedRoot = ReactDOM.createRoot(document.getElementById('nestedRoot'));
+nestedRoot.render(parent);
